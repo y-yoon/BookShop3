@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" th:href="@{css/style.css}">
+
+
+</head>
+
+<body>
+
+	<div th:replace="fragements/header"></div>
+	<div class="container mt-5 mb-3">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col">
+						<div class="card card-4" style="width: 440px;height: 300px;">
+							<img th:src="@{/uploads/books/{id}/{imgName}(id=${book.id},imgName=${book.imgName})}"
+								alt="book" width="440px" height="300px">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col">
+						<div class="card p-3 text-center" style="width: 440px; height: 300px;">
+							<h1 th:text="${book.title}"></h1>
+							<h5 th:text="${book.author}"></h5>
+							<h5 th:text="'$' +${book.price}"></h5>
+							<h5 th:text="'Published on- ' +${book.publishDate}"></h5>
+							<form class="needs-validation mb-4" th:action="@{/cart/add/{bookId}(bookId=${book.id})}"
+								method="post" novalidate>
+								<div style="margin-left: 80px;">Instock quantity : <span th:text="${book.quantity}"></span></div>
+								<label>Choose Quantity:</label>
+								<input type="number" name="quantity" th:value="${book.quantity}" required min="1" th:max="${book.quantity}">
+
+								<div class="invalid-feedback">Please enter instock quantity!</div>
+								<button type="submit" class="btn btn-secondary mt-2 ms-5">Add to Cart</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row ms-5 mb-4">
+		<div class="col">
+			<a th:href="@{/book}" class="btn btn-info ms-5">Continue Shopping</a>
+			<a th:href="@{/cart}" class="btn btn-warning ms-5 ">View Cart</a>
+
+
+
+		</div>
+	</div>
+
+<!-- Form Validation -->
+	<script type="text/javascript">
+		'use strict'
+		var form = document.querySelector('.needs-validation')
+		form.addEventListener('submit', function(event) {
+			if (!form.checkValidity()) {
+				event.preventDefault()
+				event.stopPropagation()
+			}
+			form.classList.add('was-validated')
+		})
+	</script>
+	<!-- End Form Validation -->
+
+
+
+	<div th:replace="fragements/footer"></div>
+
+</body>
+
+</html>

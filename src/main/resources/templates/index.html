@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" th:href="@{css/style.css}">
+
+
+	
+</head>
+<body>
+
+ <div th:replace="fragements/header"></div>
+
+
+	
+<section id="showcase" class="d-flex justify-content-center align-items-center">
+    <div id="overlay"></div>
+    <div id="header" class="container text-center text-white">
+        <h1 class="display-4 mb-0">MODERN BOOK SHOP</h1>
+        <p class="lead d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, rem.</p>
+        <button id="book" class="btn btn-lg btn-info px-5">DO AS U DREAM</button>
+    </div>
+</section>
+
+ <section id="icon">
+  <div class="container text-center mt-5">
+      <div class="row">
+          <div class="col-md-4 p-3">
+              <img src="images/book.png" class="img-fluid my-2 d-none d-md-inline" width="100"
+                   height="100"
+                     alt="">
+              <h3>Books You Like</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Aliquid illo minima nam omnis praesentium
+                  quam quasi quisquam sit unde voluptas! Error ex harum
+                  incidunt inventore laboriosam odio officia quam sint?</p>
+
+          </div>
+
+          <div class="col-md-4 p-3">
+              <img src="images/rain.png" class="img-fluid my-2 d-none d-md-inline" width="100"
+                   height="100"
+                    alt="">
+              <h3>Raining Time</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Aliquid illo minima nam omnis praesentium
+                  quam quasi quisquam sit unde voluptas! Error ex harum
+                  incidunt inventore laboriosam odio officia quam sint?</p>
+
+          </div>
+          <div class="col-md-4 p-3">
+              <img src="images/coffee.png" class="img-fluid my-2 d-none d-md-inline" width="100"
+                   height="100"
+                    alt="">
+              <h3>Dark Coffee</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Aliquid illo minima nam omnis praesentium
+                  quam quasi quisquam sit unde voluptas! Error ex harum
+                  incidunt inventore laboriosam odio officia quam sint?</p>
+
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section id="photos" class="text-center mt-5">
+    <h3>TOP INTERESTING</h3>
+    <p class="lead">Browse the collection of our best top interresting Books. <br>
+        you will definitely find what you are looking for.</p>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <img src="images/photo1.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo2.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo3.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo4.png"
+                     class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="images/photo5.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo6.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo7.png"
+                     class="img-fluid" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="images/photo8.png"
+                     class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+  
+  </section>
+
+<section id="quote">
+  <div class="container text-center mt-4">
+      <h3>WHAT OUR CUSTOMERS SAYING</h3>
+      <div class="row">
+          <div class="col-md-4 my-2">
+              <i class="fas fa-quote-left fa-2x text-info mb-3"></i>
+              <blockquote class="blockquote">
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aperiam assumenda autem corporis cum debitis ea eos et explicabo
+                      ipsa minus nostrum
+                      optio quam quas quibusdam, ut vel vero voluptates, voluptatibus.</p>
+                  <footer class="blockquote-footer">Mark Twain</footer>
+              </blockquote>
+
+          </div>
+          <div class="col-md-4 my-2">
+              <i class="fas fa-quote-left fa-2x text-info mb-3"></i>
+              <blockquote class="blockquote">
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aperiam assumenda autem corporis cum debitis ea eos et explicabo
+                      ipsa minus nostrum
+                      optio quam quas quibusdam, ut vel vero voluptates, voluptatibus.</p>
+                  <footer class="blockquote-footer">Mark Twain</footer>
+              </blockquote>
+
+          </div>
+          <div class="col-md-4 my-2">
+              <i class="fas fa-quote-left fa-2x text-info mb-3"></i>
+              <blockquote class="blockquote">
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aperiam assumenda autem corporis cum debitis ea eos et explicabo
+                      ipsa minus nostrum
+                      optio quam quas quibusdam, ut vel vero voluptates, voluptatibus.</p>
+                  <footer class="blockquote-footer">Mark Twain</footer>
+              </blockquote>
+
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-7">
+              <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="https://source.unsplash.com/366x200/?library" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://source.unsplash.com/366x200/?reading" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://source.unsplash.com/366x200/?coffee" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://source.unsplash.com/366x200/?raining" class="d-block w-100" alt="">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+          <div class="col-md-5">
+              <h3>READING MAKE ME COOL</h3>
+              <p class="lead">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam, deserunt harum maiores quaerat quo tempora veniam. Cum, eaque odio?
+              </p>
+              <a href="#">
+                  <i class="bi bi-arrow-right"></i> Read More
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="photos" class="text-center mt-5">
+  <h3>WHAT OTHERS SAYINGS</h3>
+  <div class="container">
+      <div class="row mb-3">
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?author"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?gentelman"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?cuteboy"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?cutegirl"
+                   class="img-fluid" alt="">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?laddy"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?author"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?book"
+                   class="img-fluid" alt="">
+          </div>
+          <div class="col-md-3">
+              <img src="https://source.unsplash.com/366x200/?storybook"
+                   class="img-fluid" alt="">
+          </div>
+      </div>
+  </div>
+
+</section>
+
+<section>
+  <div class="container text-center mt-5">
+      <span><i class="fas fa-quote-left fa-2x text-info mb-3"></i></span>
+      <blockquote>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Alias aspernatur consectetur dignissimos
+              exercitationem facere illum impedit in labore molestias nihil
+              nisi numquam omnis pariatur quia,
+              repudiandae saepe sequi veniam voluptatum?</p>
+          <footer class="blockquote-footer">Mark Twain</footer>
+      </blockquote>
+  </div>
+</section>
+
+
+
+
+
+
+
+<div th:replace="fragements/footer"></div>
+
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+
+<body>
+
+
+	<div th:replace="fragements/header"></div>
+
+	<div sec:authorize="hasRole('ADMIN')">
+		<div class="h2 text-center mt-4">
+			View History
+
+		</div>
+		<div class="container">
+
+			<table class="table table-striped table-secondary table-hover">
+				<tr>
+					<th>ID</th>
+					<th>MemberId</th>
+					<th>BookId</th>
+					<th>OrderId</th>
+					<th>Quantity</th>
+					<th>Date</th>
+					<th>Title</th>
+
+
+				</tr>
+				<tr th:each="orderItem :${orderItemList}">
+					<td th:text="${orderItem.id}"></td>
+					<td th:text="${orderItem.member.id}"></td>
+					<td th:text="${orderItem.book.id}"></td>
+					<td th:text="${orderItem.orderId}"></td>
+					<td th:text="${orderItem.quantity}"></td>
+					<td th:text="${orderItem.date}"></td>
+					<td th:text="${orderItem.book.title}"></td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div sec:authorize="hasRole('USER')">
+		<div class="h2 text-center mt-4">
+			View History
+
+		</div>
+		<div class="container">
+
+			<table class="table table-striped table-secondary table-hover">
+				<tr>
+					<th>ID</th>
+					<th>Image</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Quantity</th>
+					<th>Date</th>
+					<th>OrderId</th>
+
+
+
+				</tr>
+				<tr th:each="orderItem :${orderItemList}">
+					<td th:text="${orderItem.id}"></td>
+					<td><img
+							th:src="@{/uploads/books/{id}/{imgName}(id=${orderItem.book.id},imgName=${orderItem.book.imgName})}"
+							width="100px" height="100px"></td>
+					<td th:text="${orderItem.book.title}"></td>
+					<td th:text="${orderItem.book.author}"></td>
+					<td th:text="${orderItem.quantity}"></td>
+					<td th:text="${orderItem.date}"></td>
+					<td th:text="${orderItem.orderId}"></td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div th:replace="fragements/footer"></div>
+
+</body>
+
+</html>
